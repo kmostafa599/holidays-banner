@@ -1,0 +1,25 @@
+.b{
+    display:none;
+}
+.b2{
+    width:500px;
+    height:80px;
+    padding:1rem;
+    background-color:#ffedd5;
+    color:#c2410c;
+    border-left: 4px solid #f97316;
+    grid-column-start: 3;
+}
+#banner_title{
+    font-weight: 700;
+}
+
+#heading_container{  
+    display:grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+#headig{
+    width: fit-content;
+    white-space: nowrap;
+    grid-column: span 2 / span 2;
+}
