@@ -100,7 +100,7 @@
 
             "Sep":
             {
-                holidays: ["29"],
+                holidays: ["30"],
                 announcementDates: [{}],
                 nextMonthHoliday:{
                     holiday:"",
@@ -111,7 +111,7 @@
             },
 
             "Oct": {
-                holidays: ["17"],
+                holidays: ["02"],
                 announcementDates: [{}],
                 nextMonthHoliday:{
                     holiday:"",
@@ -162,10 +162,20 @@
         var days = getNumberOfDaysThisMonth(mm, yyyy) //number of days
 
         var month = months[today.getMonth()] //+ 1; // Months start at 0!
-        var nextMonth = months[today.getMonth()+1] //next month
-
+        let nextMonthIndex = today.getMonth()+1 
+        //console.log(nextMonthIndex)
+        if(nextMonthIndex === 12 ){
+            nextMonthIndex = 0
+        }
+        var nextMonth = months[nextMonthIndex] //next month
+        //console.log(nextMonth)
         var banner = document.getElementById('banner')
-        
+        // console.log(document)
+        // var hello = document.getElementById('hello')
+        // console.log(hello)
+        // var userInput = document.getElementById('user_input')
+        // console.log(userInput.value) 
+        // hello.innerHTML = hello.innerHTML + " World! "
 	
     
        	holidaysObj[nextMonth]?.holidays?.length != 0 ? holidaysObj[nextMonth].holidays.map((day, index) => { //loop through all available holidays
@@ -241,8 +251,8 @@
 }) : null
 
 
-        //console.log("this month: ", holidaysObj[month])
-        //console.log("next month: ", holidaysObj[nextMonth])
+        console.log("this month: ", holidaysObj[month])
+        console.log("next month: ", holidaysObj[nextMonth])
 
         var thisMonth = false
         holidaysObj[month].announcementDates.map((date,index)=>{
@@ -258,11 +268,22 @@
             
             }
             else{
+                banner.classList.remove('b');
+            	banner.classList.add('b2');
             banner.innerHTML = `
 						<b>In observance of local holiday</b><br/>
 						Our team will be taking the day off on <b>${parseInt(mm)+1}/${holidaysObj[month].holidays[index]}/${yyyy}</b>`            
            }
-            }
+        }
         })
-        thisMonth?
-            null :  holidaysObj[month].nextMonthHoliday.announcementDates[dd] === true ? banner.innerHTML = `<b>In observance of local holiday</b><br/>Our team will be taking the day off on <b>${parseInt(mm)+2}/${holidaysObj[month].nextMonthHoliday.holiday}/${yyyy}</b>` : null
+        if(thisMonth){
+            null
+        }
+        else{
+            if(holidaysObj[month].nextMonthHoliday.announcementDates[dd] === true){
+                banner.classList.remove('b');
+            	banner.classList.add('b2');
+                banner.innerHTML = `<b>In observance of local holiday</b><br/>Our team will be taking the day off on <b>${parseInt(mm)+2}/${holidaysObj[month].nextMonthHoliday.holiday}/${yyyy}</b>` 
+
+            }
+        }
