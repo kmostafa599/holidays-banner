@@ -169,4 +169,5 @@ there are three cases in which this object can be manipulated
 ```    
     holidays: ["14-18"]
 ```
+
     this will genetare the banner for days 14 to day 18
