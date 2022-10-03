@@ -152,20 +152,14 @@ there are three cases in which this object can be manipulated
 
 ## One day holiday
     You can add one day by adding a string to the holidays array containing the desired day ie:
-    ```javascript
-     holidays: ["15"]
-    ```
+    `holidays: ["15"]`
     This will add day 15 as the holiday
 
 ## Two days holiday
     If there is more than one day in a month you can add more than one string to the array ie:
-```    
-    holidays: ["07", "14"]
-```
+    `holidays: ["07", "14"]`
 
 ## Interval
   If the holidays are in interval you can add - between the two days ie:
-    
-` holidays: ["14-18"]
-
-    this will genetare the banner for days 14 to day 18
+  `holidays: ["14-18"]`
+   this will genetare the banner for days 14 to day 18
