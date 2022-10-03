@@ -159,4 +159,4 @@ there are three cases in which this object can be manipulated
 ## Interval
   If the holidays are in interval you can add `-` between the two days ie:
   `holidays: ["14-18"]`
-   this will genetare the banner for days 14 to day 18
+   this will genrate the banner for days 14 to day 18
