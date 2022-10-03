@@ -1,7 +1,7 @@
-# holidays-banner
+# Holidays Banner
 Holidays Banner is an auto holiday Announcement System based on holidays that are set by the user 
 
-# Holidays Object
+## Holidays Object
 You can change holidays array in every month of this object to auto-generate the banner 
 ```
 var holidaysObj = {
@@ -151,21 +151,21 @@ var holidaysObj = {
 there are three cases in which this object can be manipulated 
 
 ## One day holiday
-    you can add one day by adding a string to the holidays array containing the desired day ie:
+    You can add one day by adding a string to the holidays array containing the desired day ie:
     ```javascript
      holidays: ["15"]
     ```
-    this will add day 15 as the holiday
+    This will add day 15 as the holiday
 
 ## Two days holiday
-    if there is more than one day in a month you can add more than one string to the array ie:
+    If there is more than one day in a month you can add more than one string to the array ie:
     ```
     
     holidays: ["07", "14"]
     ```
 
 ## Interval
-  if the holidays are in interval you can add - between the two days ie:
+  If the holidays are in interval you can add - between the two days ie:
     
     ```javascript
     
