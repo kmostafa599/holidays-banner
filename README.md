@@ -150,22 +150,22 @@ var holidaysObj = {
 ```
 there are three cases in which this object can be manipulated 
 
-# One day holiday
+## One day holiday
     you can add one day by adding a string to the holidays array containing the desired day ie:
     ```javascript
      holidays: ["15"]
     ```
     this will add day 15 as the holiday
 
-# Two days holiday
+## Two days holiday
     if there is more than one day in a month you can add more than one string to the array ie:
     ```
     
     holidays: ["07", "14"]
     ```
 
-# Interval
-    if the holidays are in interval you can add - between the two days ie:
+## Interval
+  if the holidays are in interval you can add - between the two days ie:
     
     ```javascript
     
